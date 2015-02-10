@@ -251,7 +251,7 @@
               <div class="widget-content popular-posts">
                 <ul>
                 {% for post in posts %}
-                  <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                  <li><a href="{{ post.permalink }}">{{ post.title }}|{{ post.created_at }}</a></li>
                 {% endfor %}
                 </ul>
               </div>
@@ -264,7 +264,7 @@
                 <ul>
                 {% for post in posts_recent %}
                 {% if loop.index <= 5 and loop.index > 0 %}
-                  <li><a href="{{ post.permalink }}">{{ post.title }}|{{ post.created }}</a></li>
+                  <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
                 {% endif %}
                 {% endfor %}
                 </ul>
