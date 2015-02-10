@@ -50,6 +50,7 @@
                 <li><a href="/">首页</a></li>
                 <li><a href="/tag/java">Java</a></li>
                 <li><a href="/tag/online-service">实际问题</a></li>
+                <li><a href="/tag/tools">工具</a></li>
                 <li><a href="/tag/thoughts">随感</a></li>
                 <li><a href="/tag/read">备忘</a></li>
                 {% if pages %}
@@ -244,8 +245,20 @@
                 </ul>
               </div>
             </div>
+            {% if posts %}
             <div class="widget widget-latestposts">
-              <h2 class="widget-title">Latest Posts</h2>
+              <h2 class="widget-title">本页导航</h2>
+              <div class="widget-content popular-posts">
+                <ul>
+                {% for post in posts %}
+                  <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                {% endfor %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+            <div class="widget widget-latestposts">
+              <h2 class="widget-title">最近的文章</h2>
               <div class="widget-content popular-posts">
                 {% if posts_recent %}
                 <ul>
