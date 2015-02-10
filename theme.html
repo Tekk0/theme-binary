@@ -251,12 +251,13 @@
               <div class="widget-content popular-posts">
                 <ul>
                 {% for post in posts %}
-                  <li><a href="{{ post.permalink }}">{{ post.title }}|{{ post.created_at }}</a></li>
+                  <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
                 {% endfor %}
                 </ul>
               </div>
             </div>
             {% endif %}
+            {% if !posts %}
             <div class="widget widget-latestposts">
               <h2 class="widget-title">最近文章</h2>
               <div class="widget-content popular-posts">
@@ -271,6 +272,7 @@
                 {% endif %}
               </div>
             </div>
+            {% endif %}
             <div class="widget widget-tagcloud">
               <h2 class="widget-title">Tag Cloud</h2>
               <div class="widget-content tag-cloud">
