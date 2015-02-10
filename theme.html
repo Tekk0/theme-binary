@@ -258,13 +258,13 @@
             </div>
             {% endif %}
             <div class="widget widget-latestposts">
-              <h2 class="widget-title">最近的文章</h2>
+              <h2 class="widget-title">最近文章</h2>
               <div class="widget-content popular-posts">
                 {% if posts_recent %}
                 <ul>
                 {% for post in posts_recent %}
                 {% if loop.index <= 5 and loop.index > 0 %}
-                  <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+                  <li><a href="{{ post.permalink }}">{{ post.title }}|{{ post.created }}</a></li>
                 {% endif %}
                 {% endfor %}
                 </ul>
